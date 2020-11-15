@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container w-75">
+    <h1>BMI Calculator</h1>
+    <h2>Enter your height in inches and weight in pounds:</h2>
+        <form id="heightAndWeight">
+            <div class="form-group">
+                <label for="height">Height (Inches)</label>
+                <input name="height" id="height" type="number" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight (Pounds)</label>
+                <input name="weight" id="weight" type="number" class="form-control">
+            </div>
+
+            <button class="btn btn-primary">Calculate BMI</button>
+        </form>
+    <p id="message"></p>
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+<script src="validation.js"></script>
+</html>
