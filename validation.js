@@ -48,24 +48,18 @@ $(document).ready(function () {
         var weight = $("input[name=weight]").val();
         var bmi = ((weight / (height * height)) * 703);
 
-        switch (bmi)
+        if (bmi < 18.5){
+            $("#message").text("Your BMI is " + bmi.toFixed(2) + " and you are underweight.");
+        }
+        else if (bmi >=18.5 && bmi < 25)
         {
-            case (bmi < 18.5):
-                $("#message").text("Your BMI is: " + bmi.toFixed(2) + " and you are underweight.");
-                break;
-
-            case (bmi >= 18.5 && bmi <25):
-                $("#message").text("Your BMI is: " + bmi.toFixed(2) + " and you are at a normal weight.");
-                break;
-
-            case (bmi >= 25 && bmi < 30):
-                $("#message").text("Your BMI is: " + bmi.toFixed(2) + " and you are overweight.");
-                break;
-
-            case (bmi >= 30):
-                $("#message").text("Your BMI is: " + bmi.toFixed(2) + " and you are obese.");
-                break;
+            $("#message").text("Your BMI is " + bmi.toFixed(2) + " and you are at a normal weight.");
+        }
+        else if (bmi >= 25 && bmi < 30) {
+            $("#message").text("Your BMI is " + bmi.toFixed(2) + " and you are overweight.");
+        }
+        else {
+            $("#message").text("Your BMI is " + bmi.toFixed(2) + " and you are obese.");
         }
     }
-
 });
